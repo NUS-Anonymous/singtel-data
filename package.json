@@ -1,0 +1,95 @@
+{
+  "_args": [
+    [
+      "circular-migration-plot",
+      ""
+    ]
+  ],
+  "_from": "circular-migration-plot@latest",
+  "_id": "circular-migration-plot@1.2.0",
+  "_inCache": true,
+  "_installable": true,
+  "_location": "/circular-migration-plot",
+  "_npmUser": {
+    "email": "schmidt@netzmerk.com",
+    "name": "jo"
+  },
+  "_npmVersion": "1.4.3",
+  "_phantomChildren": {},
+  "_requested": {
+    "name": "circular-migration-plot",
+    "raw": "circular-migration-plot",
+    "rawSpec": "",
+    "scope": null,
+    "spec": "latest",
+    "type": "tag"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/circular-migration-plot/-/circular-migration-plot-1.2.0.tgz",
+  "_shasum": "5f2a176a6b433cc469c403d2a43e18f0c1318d06",
+  "_shrinkwrap": null,
+  "_spec": "circular-migration-plot",
+  "_where": "",
+  "author": {
+    "name": "Johannes J. Schmidt"
+  },
+  "bin": {
+    "cmp-compile": "bin/compile.js",
+    "cmp-filter": "bin/filter.js"
+  },
+  "bugs": {
+    "url": "https://github.com/jo/circular-migration-plot/issues"
+  },
+  "dependencies": {
+    "binary-csv": "^0.1.7",
+    "highland": "^1.16.1",
+    "minimist": "^0.2.0",
+    "underscore": "^1.6.0"
+  },
+  "description": "Creating interactive circular migration plots for the web using D3.",
+  "devDependencies": {
+    "browserify": "^3.31.2",
+    "d3": "^3.4.2",
+    "http-server": "^0.6.1",
+    "jshint": "^2.4.4",
+    "tap": "^0.4.8",
+    "uglify-js": "^2.4.12"
+  },
+  "directories": {},
+  "dist": {
+    "shasum": "5f2a176a6b433cc469c403d2a43e18f0c1318d06",
+    "tarball": "https://registry.npmjs.org/circular-migration-plot/-/circular-migration-plot-1.2.0.tgz"
+  },
+  "homepage": "https://github.com/jo/circular-migration-plot",
+  "keywords": [
+    "d3",
+    "migration",
+    "plot"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "maintainers": [
+    {
+      "name": "jo",
+      "email": "schmidt@netzmerk.com"
+    }
+  ],
+  "name": "circular-migration-plot",
+  "optionalDependencies": {},
+  "readme": "ERROR: No README data found!",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jo/circular-migration-plot.git"
+  },
+  "scripts": {
+    "browserify": "mkdir -p dist && browserify index.js -s CircularMigrationPlot -o dist/circular-migration-plot.js",
+    "build": "npm run browserify && npm run uglifyjs",
+    "jshint": "jshint -c .jshintrc index.js bin/*.js test/*.js",
+    "start": "http-server",
+    "test": "tap test/*.js",
+    "uglifyjs": "uglifyjs dist/circular-migration-plot.js -mc > dist/circular-migration-plot.min.js"
+  },
+  "version": "1.2.0"
+}
